@@ -1,103 +1,194 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
-  <title>Fereshteh Gholami</title>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fereshteh Gholami</title>
+
+  <style>
+    :root{
+      --navy:#0b1f3a;
+      --forest:#1b4d3e;
+      --bg:#f6f8fb;
+      --text:#1a1a1a;
+      --card:#ffffff;
+    }
+
+    *{
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.7;
+      text-align:justify;
+    }
+
+    #top{
+      background:linear-gradient(135deg,var(--navy),var(--forest));
+      color:white;
+      text-align:center;
+      padding:70px 20px;
+    }
+
+    #top h1{
+      margin:0;
+      font-size:36px;
+    }
+
+    #top p{
+      margin-top:10px;
+      opacity:0.9;
+    }
+
+    .container{
+      max-width:900px;
+      margin:50px auto;
+      background:var(--card);
+      padding:30px;
+      border-radius:14px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.06);
+    }
+
+    h2,h3,h4{
+      color:var(--navy);
+      margin-top:0;
+      text-align:left;
+    }
+
+    ul{
+      padding-left:20px;
+    }
+
+    /* CONTACT FORM */
+    form{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin-top:20px;
+    }
+
+    input, textarea{
+      padding:12px;
+      border:1px solid #ddd;
+      border-radius:8px;
+      font-size:14px;
+      outline:none;
+      transition:0.2s;
+    }
+
+    input:focus, textarea:focus{
+      border-color:var(--forest);
+      box-shadow:0 0 0 2px rgba(27,77,62,0.2);
+    }
+
+    button{
+      background:var(--forest);
+      color:white;
+      padding:12px;
+      border:none;
+      border-radius:8px;
+      cursor:pointer;
+      font-size:15px;
+      transition:0.2s;
+    }
+
+    button:hover{
+      background:var(--navy);
+    }
+
+    /* PROJECT CARDS */
+    .project{
+      margin-top:20px;
+      padding:15px;
+      border-left:4px solid var(--forest);
+      background:#f9fbfc;
+      border-radius:8px;
+    }
+
+  </style>
 </head>
 
 <body>
 
-  <div id="wrapper">
+  <!-- HEADER -->
+  <section id="top">
+    <h1>Fereshteh Gholami</h1>
+    <p>Android Developer | Kotlin | MVVM | Clean Architecture</p>
+  </section>
 
-    <!-- MAIN HEADER (Simple) -->
-    <section id="top" style="text-align:center; padding:60px 20px;">
-      <h1>Fereshteh Gholami</h1>
-      <p>Android Developer | Kotlin | Clean Architecture</p>
-    </section>
+  <!-- ABOUT -->
+  <section>
+    <div class="container">
+      <h2>About Me</h2>
 
-    <!-- ABOUT -->
-    <section id="one">
-      <div class="container">
+      <p>
+        I am an Android developer with experience in building native Android applications using Kotlin and modern Android development practices.
+        I have worked on freelance and company projects, covering the full development lifecycle from requirement analysis to implementation and maintenance.
+        My focus is building clean, maintainable, and user-friendly applications using MVVM, REST APIs, local databases, and modern Android tools.
+        Currently, I am working on personal product ideas while improving my skills and exploring new technologies.
+      </p>
+    </div>
+  </section>
 
-        <h2>About Me</h2>
+  <!-- SKILLS -->
+  <section>
+    <div class="container">
+      <h3>Skills</h3>
+      <ul>
+        <li>Kotlin & Java</li>
+        <li>Git & GitHub</li>
+        <li>REST API (Retrofit)</li>
+        <li>MVVM Architecture</li>
+        <li>Clean Code Principles</li>
+        <li>Coroutines & Flow</li>
+        <li>Room Database</li>
+        <li>Hilt (Dependency Injection)</li>
+      </ul>
+    </div>
+  </section>
 
-        <p>
-          I am an Android developer with experience in building native Android applications using Kotlin and modern Android development practices.
-          <br><br>
+  <!-- PROJECTS -->
+  <section>
+    <div class="container">
+      <h3>Projects</h3>
 
-          I have worked on both freelance and company projects, covering the full development lifecycle from requirement analysis to implementation and maintenance.
-          <br><br>
-
-          My focus is on building clean, maintainable, and user-friendly applications using MVVM architecture, REST APIs, local databases, and modern Android tools.
-          <br><br>
-
-          Currently, I am working on personal product ideas while improving my skills and exploring new technologies.
-        </p>
-
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="two">
-      <div class="container">
-
-        <h3>Skills</h3>
-
-        <ul>
-          <li>Kotlin & Java</li>
-          <li>Git</li>
-          <li>REST API / Retrofit</li>
-          <li>MVVM Architecture</li>
-          <li>Clean Code Principles</li>
-          <li>Coroutines / Flow</li>
-          <li>Room Database</li>
-          <li>Hilt / Dependency Injection</li>
-        </ul>
-
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="three">
-      <div class="container">
-
-        <h3>Projects</h3>
-        <p>Selected projects I have designed and developed.</p>
-
+      <div class="project">
         <h4>Event Reminder</h4>
-        <p>Android app built with MVVM, alarms, and event scheduling features.</p>
+        <p>Alarm-based Android app using MVVM, services, broadcast receivers and scheduling features.</p>
+      </div>
 
+      <div class="project">
         <h4>Periodic Table App</h4>
-        <p>Educational app for students to explore elements and their properties.</p>
+        <p>Educational app for students to explore elements and their properties in an interactive UI.</p>
+      </div>
 
+      <div class="project">
         <h4>Exhibition Management App</h4>
-        <p>Multi-role application with data collection and export features for clients.</p>
-
+        <p>Multi-role system for data collection and export (PDF, Excel, Word) with backend integration.</p>
       </div>
-    </section>
 
-    <!-- CONTACT -->
-    <section id="four">
-      <div class="container">
+    </div>
+  </section>
 
-        <h3>Contact</h3>
+<!-- CONTACT -->
+  <section>
+    <div class="container">
+      <h3>Contact</h3>
+      <p>If you want to collaborate on Android projects, feel free to reach out.</p>
 
-        <p>If you want to collaborate on Android projects, feel free to reach out.</p>
-
-        <form>
-          <input type="text" placeholder="Name" /><br><br>
-          <input type="email" placeholder="Email" /><br><br>
-          <input type="text" placeholder="Subject" /><br><br>
-          <textarea placeholder="Message" rows="6"></textarea><br><br>
-          <button type="submit">Send</button>
-        </form>
-
-      </div>
-    </section>
-
-  </div>
+      <form>
+        <input type="text" placeholder="Name" />
+        <input type="email" placeholder="Email" />
+        <input type="text" placeholder="Subject" />
+        <textarea rows="6" placeholder="Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
 
 </body>
 </html>
